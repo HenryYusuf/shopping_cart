@@ -9,8 +9,10 @@ export interface Product {
 
 export interface ShoppingCart {
   items: Product[];
+  addItemToCart?: (id: string) => void;
 }
 
 export const CartContext = createContext<ShoppingCart>({
   items: [],
+  addItemToCart: () => {},
 });
